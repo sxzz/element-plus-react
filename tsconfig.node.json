@@ -8,5 +8,5 @@
     "lib": ["esnext"],
     "types": ["node"]
   },
-  "include": ["*/vite.config.ts", "build", "packages/build*/**/*"]
+  "include": ["*/vite.config.ts", "packages/build*/**/*"]
 }
