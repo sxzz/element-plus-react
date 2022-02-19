@@ -14,27 +14,37 @@ export const buttonTypes = [
 ] as const
 export type ButtonTypes = typeof buttonTypes[number]
 
-export interface ButtonProps {
-  children?: any
+export type ButtonProps = {
+  children?: React.ReactNode
   size?: ComponentSizes
   type?: ButtonTypes
   plain?: boolean
   round?: boolean
   circle?: boolean
-  onClick?: () => void
-}
+  onClick?: React.MouseEventHandler<HTMLElement>
+} & Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>
 
 export function Button(props: ButtonProps) {
-  const classNames = ['el-button']
-  // eslint-disable-next-line unicorn/explicit-length-check
-  if (props.size) classNames.push(`el-button--${props.size}`)
-  if (props.type) classNames.push(`el-button--${props.type}`)
-  if (props.plain) classNames.push('is-plain')
-  if (props.round) classNames.push('is-round')
-  if (props.circle) classNames.push('is-circle')
+  const {
+    children,
+    className,
+    size,
+    type,
+    plain,
+    round,
+    circle,
+    onClick,
+    ...rest
+  } = props
+  const classNames = ['el-button', className]
+  if (size) classNames.push(`el-button--${size}`)
+  if (type) classNames.push(`el-button--${type}`)
+  if (plain) classNames.push('is-plain')
+  if (round) classNames.push('is-round')
+  if (circle) classNames.push('is-circle')
   return (
-    <button className={classNames.join(' ')} onClick={props.onClick}>
-      {props.children}
+    <button {...rest} className={classNames.join(' ')} onClick={onClick}>
+      {children}
     </button>
   )
 }
