@@ -1,0 +1,23 @@
+{
+  "name": "@element-plus/react-components",
+  "version": "0.0.1",
+  "description": "Element Plus for React Components",
+  "keywords": [],
+  "license": "MIT",
+  "author": "三咲智子 <sxzz@sxzz.moe>",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ep-cli"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "dependencies": {
+    "@element-plus/constants": "0.0.1",
+    "@element-plus/theme-chalk": "^2.0.2"
+  },
+  "devDependencies": {
+    "@element-plus/build-cli": "workspace:*"
+  }
+}

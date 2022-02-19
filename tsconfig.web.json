@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "target": "es2018",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "jsx": "react-jsx"
+  },
+  "include": ["packages/global.d.ts", "packages/*/src", "playground/src"],
+  "exclude": ["packages/build*"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@element-plus/constants",
+  "version": "0.0.1",
+  "description": "Constants of Element Plus",
+  "license": "MIT",
+  "author": "三咲智子 <sxzz@sxzz.moe>",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ep-cli"
+  },
+  "devDependencies": {
+    "@element-plus/build-cli": "workspace:*"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@element-plus/build-cli",
+  "version": "0.0.1",
+  "description": "Element Plus React CLI",
+  "license": "MIT",
+  "private": true,
+  "author": "三咲智子 <sxzz@sxzz.moe>",
+  "main": "./dist/index.js",
+  "bin": {
+    "ep-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
+    "esbuild": "^0.14.23",
+    "esbuild-register": "^3.3.2",
+    "tsup": "^5.11.13"
+  },
+  "devDependencies": {
+    "@element-plus/build-utils": "workspace:*",
+    "esno": "^0.14.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "target": "es2018",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"]
+  },
+  "include": ["*/vite.config.ts", "build", "packages/build*/**/*"]
+}

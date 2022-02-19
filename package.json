@@ -1,0 +1,29 @@
+{
+  "description": "Element Plus for React Monorepo",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus-react.git"
+  },
+  "author": "三咲智子 <sxzz@sxzz.moe>",
+  "scripts": {
+    "dev": "pnpm build --filter @element-plus/build* --parallel && pnpm run dev -C playground",
+    "dev:cli": "pnpm build:watch -C packages/build-cli",
+    "build:cli": "pnpm build -C packages/build-cli",
+    "build:react": "pnpm build --filter @element-plus/* --filter !@element-plus/build* --parallel",
+    "build": "pnpm build:cli && pnpm build:react",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config-prettier": "^1.6.1",
+    "@sxzz/eslint-config-ts": "^1.6.2",
+    "@types/node": "*",
+    "c8": "^7.11.0",
+    "eslint": "^8.9.0",
+    "eslint-define-config": "^1.2.5",
+    "typescript": "^4.5.5",
+    "vitest": "^0.4.1"
+  }
+}
