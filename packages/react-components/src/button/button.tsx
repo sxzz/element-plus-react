@@ -16,9 +16,11 @@ export type ButtonTypes = typeof buttonTypes[number]
 
 export interface ButtonProps {
   children?: any
-  round?: boolean
   size?: ComponentSizes
   type?: ButtonTypes
+  plain?: boolean
+  round?: boolean
+  circle?: boolean
   onClick?: () => void
 }
 
@@ -27,7 +29,9 @@ export function Button(props: ButtonProps) {
   // eslint-disable-next-line unicorn/explicit-length-check
   if (props.size) classNames.push(`el-button--${props.size}`)
   if (props.type) classNames.push(`el-button--${props.type}`)
+  if (props.plain) classNames.push('is-plain')
   if (props.round) classNames.push('is-round')
+  if (props.circle) classNames.push('is-circle')
   return (
     <button className={classNames.join(' ')} onClick={props.onClick}>
       {props.children}
