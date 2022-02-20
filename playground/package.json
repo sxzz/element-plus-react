@@ -21,6 +21,7 @@
     "@vitejs/plugin-react": "^1.2.0",
     "sass": "^1.49.8",
     "vite": "^2.8.4",
+    "vite-plugin-inspect": "^0.3.14",
     "vite-plugin-tsconfig-paths": "^1.0.5"
   }
 }
