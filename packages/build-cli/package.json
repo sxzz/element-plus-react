@@ -7,7 +7,7 @@
   "author": "三咲智子 <sxzz@sxzz.moe>",
   "main": "./dist/index.js",
   "bin": {
-    "ep-cli": "./dist/index.js"
+    "ep-cli": "./bin/ep-cli.js"
   },
   "scripts": {
     "build": "tsup",
