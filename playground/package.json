@@ -15,6 +15,7 @@
   "devDependencies": {
     "@element-plus/build-utils": "workspace:*",
     "@element-plus/react": "workspace:*",
+    "@element-plus/react-components": "workspace:*",
     "@esbuild-plugins/tsconfig-paths": "^0.0.4",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
