@@ -1,4 +1,5 @@
 import path from 'path'
+import { rm } from 'fs/promises'
 import { program } from 'commander'
 import {
   getDependencies,
@@ -7,6 +8,7 @@ import {
 } from '@element-plus/build-utils'
 import { build as tsup } from 'tsup'
 import { register } from 'esbuild-register/dist/node'
+import type { Options } from 'tsup'
 import type { Project } from '@element-plus/build-utils'
 import type { BuildOptions } from './types'
 
@@ -53,15 +55,42 @@ async function build(packageName?: string) {
     inject.push(path.resolve(__dirname, '../react-shim.ts'))
   }
 
-  process.chdir(pkg.dir)
-  tsup({
-    name: 'ep-cli-tsup',
-    entry: [path.resolve(pkg.dir, 'src')],
-    outDir: path.resolve(pkg.dir, 'dist'),
+  const outDir = path.resolve(pkg.dir, 'dist')
+  const commonOptions: Options = {
+    outDir,
     target: 'es2018',
     format: config.format ?? ['esm', 'cjs'],
     splitting: false,
-    clean: true,
     inject,
-  })
+  }
+  const bundleOptions: Options = {
+    ...commonOptions,
+    entry: [path.resolve(pkg.dir, 'src/index.ts')],
+  }
+
+  await rm(outDir, { recursive: true, force: true })
+
+  process.chdir(pkg.dir)
+  await Promise.all([
+    tsup({
+      ...commonOptions,
+      name: 'ep-cli-tsup',
+      entry: [path.resolve(pkg.dir, 'src')],
+    }),
+    tsup({
+      ...bundleOptions,
+      name: 'ep-cli-tsup-bundle',
+      esbuildOptions(options) {
+        options.entryNames = '[dir]/bundle'
+      },
+    }),
+    tsup({
+      ...bundleOptions,
+      name: 'ep-cli-tsup-bundle-minify',
+      minify: true,
+      esbuildOptions(options) {
+        options.entryNames = '[dir]/bundle.min'
+      },
+    }),
+  ])
 }
