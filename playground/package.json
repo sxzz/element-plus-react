@@ -21,6 +21,7 @@
     "@types/react-dom": "^17.0.13",
     "@vitejs/plugin-react": "^1.2.0",
     "sass": "^1.49.9",
+    "unplugin-auto-import": "^0.6.4",
     "vite": "^2.8.6",
     "vite-plugin-inspect": "^0.4.3",
     "vite-plugin-tsconfig-paths": "^1.0.5"
