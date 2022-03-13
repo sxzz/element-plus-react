@@ -19,11 +19,11 @@ export type ButtonHtmlType = typeof buttonHtmlTypes[number]
 export type ButtonProps = {
   children?: React.ReactNode
   size?: ComponentSize
-  type?: ButtonHtmlType
+  type?: ButtonType
   plain?: boolean
   round?: boolean
   circle?: boolean
-  htmlType: ButtonHtmlType
+  htmlType?: ButtonHtmlType
   onClick?: React.MouseEventHandler<HTMLElement>
 } & Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>
 
