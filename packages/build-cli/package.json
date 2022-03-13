@@ -11,16 +11,18 @@
   },
   "scripts": {
     "build": "tsup",
-    "build:watch": "tsup --watch"
+    "dev": "MODE=dev tsup",
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
+    "@element-plus/build-utils": "workspace:*",
     "commander": "^9.0.0",
     "esbuild": "^0.14.23",
     "esbuild-register": "^3.3.2",
     "tsup": "^5.11.13"
   },
   "devDependencies": {
-    "@element-plus/build-utils": "workspace:*",
-    "esno": "^0.14.1"
+    "esno": "^0.14.1",
+    "rimraf": "^3.0.2"
   }
 }

@@ -10,6 +10,7 @@ importers:
       c8: ^7.11.0
       eslint: ^8.10.0
       eslint-define-config: ^1.2.5
+      rimraf: ^3.0.2
       typescript: ^4.5.5
       vitest: ^0.5.7
     devDependencies:
@@ -19,6 +20,7 @@ importers:
       c8: 7.11.0
       eslint: 8.10.0
       eslint-define-config: 1.2.5
+      rimraf: 3.0.2
       typescript: 4.5.5
       vitest: 0.5.7_c8@7.11.0
 
@@ -29,15 +31,17 @@ importers:
       esbuild: ^0.14.23
       esbuild-register: ^3.3.2
       esno: ^0.14.1
+      rimraf: ^3.0.2
       tsup: ^5.11.13
     dependencies:
+      '@element-plus/build-utils': link:../build-utils
       commander: 9.0.0
       esbuild: 0.14.23
       esbuild-register: 3.3.2_esbuild@0.14.23
       tsup: 5.11.13_typescript@4.5.5
     devDependencies:
-      '@element-plus/build-utils': link:../build-utils
       esno: 0.14.1
+      rimraf: 3.0.2
 
   packages/build-utils:
     specifiers:
@@ -45,33 +49,39 @@ importers:
       '@pnpm/find-workspace-packages': ^3.1.42
       '@pnpm/logger': ^4.0.0
       esno: ^0.14.1
+      rimraf: ^3.0.2
       tsup: ^5.11.13
       typescript: ^4.5.5
     dependencies:
       '@pnpm/find-workspace-dir': 3.0.2
       '@pnpm/find-workspace-packages': 3.1.42_@pnpm+logger@4.0.0
       '@pnpm/logger': 4.0.0
+      typescript: 4.5.5
     devDependencies:
       esno: 0.14.1
+      rimraf: 3.0.2
       tsup: 5.11.13_typescript@4.5.5
-      typescript: 4.5.5
 
   packages/constants:
     specifiers:
       '@element-plus/build-cli': workspace:*
+      rimraf: ^3.0.2
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
+      rimraf: 3.0.2
 
   packages/react:
     specifiers:
       '@element-plus/build-cli': workspace:*
       '@element-plus/constants': 0.0.1
       '@element-plus/react-components': 0.0.1
+      rimraf: ^3.0.2
     dependencies:
       '@element-plus/constants': link:../constants
       '@element-plus/react-components': link:../react-components
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
+      rimraf: 3.0.2
 
   packages/react-components:
     specifiers:
@@ -79,12 +89,14 @@ importers:
       '@element-plus/constants': 0.0.1
       '@element-plus/theme-chalk': ^2.0.3
       classnames: ^2.3.1
+      rimraf: ^3.0.2
     dependencies:
       '@element-plus/constants': link:../constants
       '@element-plus/theme-chalk': 2.0.3
       classnames: 2.3.1
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
+      rimraf: 3.0.2
 
   playground:
     specifiers:
@@ -3659,7 +3671,6 @@ packages:
     resolution: {integrity: sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /ufo/0.7.11:
     resolution: {integrity: sha512-IT3q0lPvtkqQ8toHQN/BkOi4VIqoqheqM1FnkNWT9y0G8B3xJhwnoKBu5OHx8zHDOvveQzfKuFowJ0VSARiIDg==}

@@ -10,13 +10,15 @@
   "author": "三咲智子 <sxzz@sxzz.moe>",
   "main": "index.ts",
   "scripts": {
-    "build": "ep-cli"
+    "build": "ep-cli",
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "@element-plus/constants": "0.0.1",
     "@element-plus/react-components": "0.0.1"
   },
   "devDependencies": {
-    "@element-plus/build-cli": "workspace:*"
+    "@element-plus/build-cli": "workspace:*",
+    "rimraf": "^3.0.2"
   }
 }

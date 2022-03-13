@@ -7,7 +7,8 @@
   "author": "三咲智子 <sxzz@sxzz.moe>",
   "main": "dist/index.js",
   "scripts": {
-    "build": "ep-cli"
+    "build": "ep-cli",
+    "clean": "rimraf ./dist"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
@@ -19,6 +20,7 @@
     "classnames": "^2.3.1"
   },
   "devDependencies": {
-    "@element-plus/build-cli": "workspace:*"
+    "@element-plus/build-cli": "workspace:*",
+    "rimraf": "^3.0.2"
   }
 }
