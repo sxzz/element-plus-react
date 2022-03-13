@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@element-plus/constants": "0.0.1",
-    "@element-plus/theme-chalk": "^2.0.3",
+    "@element-plus/theme-chalk": "^2.1.1",
     "classnames": "^2.3.1"
   },
   "devDependencies": {

@@ -17,9 +17,9 @@
   "dependencies": {
     "@element-plus/build-utils": "workspace:*",
     "commander": "^9.0.0",
-    "esbuild": "^0.14.23",
+    "esbuild": "^0.14.25",
     "esbuild-register": "^3.3.2",
-    "tsup": "^5.11.13"
+    "tsup": "^5.12.1"
   },
   "devDependencies": {
     "esno": "^0.14.1",
