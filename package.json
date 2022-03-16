@@ -2,6 +2,7 @@
   "description": "Element Plus for React Monorepo",
   "license": "MIT",
   "private": true,
+  "packageManager": "pnpm@6.32.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus-react.git"
