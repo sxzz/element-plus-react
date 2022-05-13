@@ -22,7 +22,7 @@
     "tsup": "^5.12.1"
   },
   "devDependencies": {
-    "esno": "^0.14.1",
+    "esno": "^0.15.0",
     "rimraf": "^3.0.2"
   }
 }

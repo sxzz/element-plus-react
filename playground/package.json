@@ -9,21 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@element-plus/build-utils": "workspace:*",
     "@element-plus/react": "workspace:*",
     "@element-plus/react-components": "workspace:*",
     "@esbuild-plugins/tsconfig-paths": "^0.0.4",
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
     "@vitejs/plugin-react": "^1.2.0",
     "sass": "^1.49.9",
-    "unplugin-auto-import": "^0.6.4",
+    "unplugin-auto-import": "^0.7.1",
     "vite": "^2.8.6",
-    "vite-plugin-inspect": "^0.4.3",
+    "vite-plugin-inspect": "^0.5.0",
     "vite-plugin-tsconfig-paths": "^1.0.5"
   }
 }
