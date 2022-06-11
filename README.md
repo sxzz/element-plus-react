@@ -2,7 +2,7 @@
 
 Element Plus for React.
 
-**WIP: This project is currently under development.**
+> **Warning** **This project is currently under development.**
 
 ## License
 
